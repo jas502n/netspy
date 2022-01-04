@@ -5,6 +5,76 @@
 ![image](https://user-images.githubusercontent.com/24275308/147852768-08c706e4-5574-4b75-9b24-ba5b277b063a.png)
 
 
+#### 编译：
+
+```bash
+
+$ ./build.sh
+Build netspy_linux_amd64 ...
+linux GOARCH=amd64 go build -tags all --ldflags= -o output/netspy_linux_amd64
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2020
+UPX 3.96        Markus Oberhumer, Laszlo Molnar & John Reiser   Jan 23rd 2020
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+   6675724 ->   3571712   53.50%   linux/amd64   netspy_linux_amd64
+
+Packed 1 file.
+Build netspy_linux_386 ...
+linux GOARCH=386 go build -tags all --ldflags= -o output/netspy_linux_386
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2020
+UPX 3.96        Markus Oberhumer, Laszlo Molnar & John Reiser   Jan 23rd 2020
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+   5881272 ->   3427464   58.28%   linux/i386    netspy_linux_386
+
+Packed 1 file.
+Build netspy_windows_amd64.exe ...
+windows GOARCH=amd64 go build -tags all --ldflags= -o output/netspy_windows_amd64.exe
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2020
+UPX 3.96        Markus Oberhumer, Laszlo Molnar & John Reiser   Jan 23rd 2020
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+   6839296 ->   3587072   52.45%    win64/pe     netspy_windows_amd64.exe
+
+Packed 1 file.
+Build netspy_windows_386.exe ...
+# github.com/mdlayher/raw
+../../../pkg/mod/github.com/mdlayher/raw@v0.0.0-20190313224157-43dbcdd7739d/timeval32.go:14:42: undefined: unix.Timeval
+../../../pkg/mod/github.com/mdlayher/raw@v0.0.0-20190313224157-43dbcdd7739d/timeval32.go:16:16: undefined: timeoutError
+../../../pkg/mod/github.com/mdlayher/raw@v0.0.0-20190313224157-43dbcdd7739d/timeval32.go:18:10: undefined: unix.Timeval
+windows GOARCH=386 go build -tags all --ldflags= -o output/netspy_windows_386.exe
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2020
+UPX 3.96        Markus Oberhumer, Laszlo Molnar & John Reiser   Jan 23rd 2020
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+upx: netspy_windows_386.exe: FileNotFoundException: netspy_windows_386.exe: No such file or directory
+
+Packed 0 files.
+Build netspy_darwin_amd64 ...
+darwin GOARCH=amd64 go build -tags all --ldflags= -o output/netspy_darwin_amd64
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2020
+UPX 3.96        Markus Oberhumer, Laszlo Molnar & John Reiser   Jan 23rd 2020
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+   6497968 ->   3293200   50.68%   macho/amd64   netspy_darwin_amd64
+
+Packed 1 file.
+
+
+$ ls output
+netspy_darwin_amd64      netspy_linux_386         netspy_linux_amd64       netspy_windows_amd64.exe
+```
+
 当我们进入内网后想要扩大战果，那我们可能首先想知道当前主机能通哪些内网段。
 
 netspy正是一款应用而生的小工具，体积较小，速度极快，支持跨平台，支持多种协议探测，希望能帮到你！
