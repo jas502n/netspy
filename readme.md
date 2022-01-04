@@ -8,6 +8,10 @@
 #### 编译：
 
 ```bash
+$ export GO111MODULE=on
+```
+
+```bash
 
 $ ./build.sh
 Build netspy_linux_amd64 ...
